@@ -1,16 +1,17 @@
 class Players
-  
-  def initialize
-    # player name
-    # players have 3 lives each
+  attr_accessor :lives, :name
+
+  def initialize(n)
+    self.name = n
+    self.lives = 3
   end
 
   def lose_life
-    # if mis-answer question - 1 life
+    # decrement lives -1 when mis-answer
+    self.lives -= 1
   end
 
   def dead?
-    # when lives = 0
+    self.lives = 0
   end
-  
 end
